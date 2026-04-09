@@ -19,7 +19,7 @@
 @layer base {
   html,
   body {
-    @apply overflow-auto min-h-screen h-max bg-white dark:bg-gray-950;
+    @apply overflow-auto min-h-screen h-max bg-white dark:bg-slate-950;
   }
 
   h1,
@@ -33,22 +33,22 @@
   button,
   label,
   span {
-    @apply transition text-gray-900 dark:text-gray-100;
+    @apply transition text-slate-900 dark:text-slate-100;
   }
 
   input,
   textarea {
-    @apply text-gray-900 dark:text-gray-100;
+    @apply text-slate-900 dark:text-slate-100;
   }
 
   svg {
-    @apply transition text-gray-900 dark:text-gray-100;
+    @apply transition text-slate-900 dark:text-slate-100;
   }
   svg.contact-icon {
-    @apply hover:text-gray-600 dark:hover:text-gray-400;
+    @apply hover:text-slate-500 dark:hover:text-slate-400;
   }
   svg.darkmode-icon {
-    @apply transition text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300;
+    @apply transition text-slate-500 hover:text-slate-600 dark:text-slate-500 dark:hover:text-slate-300;
   }
 
   body::-webkit-scrollbar {
@@ -81,24 +81,24 @@
     @apply px-6 py-2 rounded hover:opacity-80 focus:ring-0 outline-none text-center;
   }
   .btn-primary {
-    @apply bg-gray-200 dark:bg-gray-700 shadow-md;
+    @apply bg-slate-300 dark:bg-slate-600 shadow-md;
   }
   .btn-secondary {
-    @apply p-0 underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-400;
+    @apply p-0 underline underline-offset-4 hover:text-slate-500 dark:hover:text-slate-400;
   }
   .btn-action {
-    @apply bg-gray-300 dark:bg-gray-600 shadow-md;
+    @apply bg-slate-400 dark:bg-slate-500 shadow-md;
   }
 
   .card {
-    @apply ring-1 ring-gray-300 dark:ring-gray-700 rounded-sm shadow-none w-full h-auto;
+    @apply ring-1 ring-slate-300 dark:ring-slate-700 rounded-sm shadow-none w-full h-auto;
   }
 
   .card-blog {
-    @apply bg-gray-100 dark:bg-gray-800/50 backdrop-blur-xl;
+    @apply bg-slate-100 dark:bg-slate-800/50 backdrop-blur-xl;
   }
 
   .card-project {
-    @apply bg-gray-50 dark:bg-gray-800/30 backdrop-blur-lg hover:shadow-md transition h-full;
+    @apply bg-slate-50 dark:bg-slate-800/30 backdrop-blur-lg hover:shadow-md transition h-full;
   }
 }
