@@ -22,16 +22,16 @@ const Navbar = ({
       <ul
         className="fixed w-full flex gap-10 justify-center items-center
         py-4 px-8 backdrop-blur-md z-50
-        bg-gray-100/30 dark:bg-gray-800/30
-        ring-1 ring-gray-300 dark:ring-gray-700"
+        bg-slate-100/30 dark:bg-slate-900/30
+        ring-1 ring-slate-300 dark:ring-slate-700"
       >
         <li className="text-lg md:text-xl">
           <Link
             href="/"
             className={
               router.pathname === "/"
-                ? "text-gray-900 dark:text-gray-100 underline underline-offset-2"
-                : "hover:text-gray-600 dark:hover:text-gray-400"
+                ? "text-slate-900 dark:text-slate-100 underline underline-offset-2"
+                : "hover:text-slate-500 dark:hover:text-slate-400"
             }
           >
             Home
@@ -47,8 +47,8 @@ const Navbar = ({
               href={route.link}
               className={
                 router.pathname.includes(route.link)
-                  ? "text-gray-900 dark:text-gray-100 underline underline-offset-2"
-                  : "hover:text-gray-600 dark:hover:text-gray-400"
+                  ? "text-slate-900 dark:text-slate-100 underline underline-offset-2"
+                  : "hover:text-slate-500 dark:hover:text-slate-400"
               }
             >
               {route.name}
