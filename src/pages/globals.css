@@ -19,24 +19,9 @@
 @layer base {
   html,
   body {
-    /* overflow: auto;
-    min-height: 100vh;
-    height: max-content;
-    color: var(--foreground-rgb);
-    background: linear-gradient(
-        to bottom,
-        var(--background-start-rgb),
-        var(--background-end-rgb)
-      )
-      var(--background-start-rgb); */
-
-    @apply overflow-auto min-h-screen h-max bg-slate-100;
+    @apply overflow-auto min-h-screen h-max bg-white dark:bg-gray-950;
   }
-  /* :root{
-    @apply bg-gradient-to-b
-    from-blue-100 via-slate-100 to-slate-100
-    dark:from-slate-900 dark:via-slate-950 dark:to-slate-950
-  } */
+
   h1,
   h2,
   h3,
@@ -48,22 +33,22 @@
   button,
   label,
   span {
-    @apply transition text-slate-950 dark:text-slate-100;
+    @apply transition text-gray-900 dark:text-gray-100;
   }
 
   input,
   textarea {
-    @apply text-slate-900 dark:text-slate-100;
+    @apply text-gray-900 dark:text-gray-100;
   }
 
   svg {
-    @apply transition text-slate-950 dark:text-slate-100;
+    @apply transition text-gray-900 dark:text-gray-100;
   }
   svg.contact-icon {
-    @apply hover:text-cyan-500 dark:hover:text-cyan-500;
+    @apply hover:text-gray-600 dark:hover:text-gray-400;
   }
   svg.darkmode-icon {
-    @apply transition text-amber-600 hover:text-amber-500 dark:text-cyan-700 dark:hover:text-cyan-300;
+    @apply transition text-gray-600 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300;
   }
 
   body::-webkit-scrollbar {
@@ -93,27 +78,27 @@
 
 @layer components {
   .btn {
-    @apply px-6 py-2 rounded dark:hover:brightness-150 hover:brightness-110 focus:ring-0 outline-none text-center;
+    @apply px-6 py-2 rounded hover:opacity-80 focus:ring-0 outline-none text-center;
   }
   .btn-primary {
-    @apply bg-slate-400/50 dark:bg-slate-500/20 shadow-md;
+    @apply bg-gray-200 dark:bg-gray-700 shadow-md;
   }
   .btn-secondary {
-    @apply p-0 underline underline-offset-4 hover:text-cyan-400;
+    @apply p-0 underline underline-offset-4 hover:text-gray-600 dark:hover:text-gray-400;
   }
   .btn-action {
-    @apply bg-cyan-400/60 dark:bg-cyan-400/30 shadow-md;
+    @apply bg-gray-300 dark:bg-gray-600 shadow-md;
   }
 
   .card {
-    @apply ring-1 ring-slate-800/50 dark:ring-slate-200/50 rounded-sm shadow-none w-full h-auto;
+    @apply ring-1 ring-gray-300 dark:ring-gray-700 rounded-sm shadow-none w-full h-auto;
   }
 
   .card-blog {
-    @apply bg-slate-200/20 dark:bg-slate-700/10 backdrop-blur-xl;
+    @apply bg-gray-100 dark:bg-gray-800/50 backdrop-blur-xl;
   }
 
   .card-project {
-    @apply bg-slate-300/40 dark:bg-slate-500/10 backdrop-blur-lg hover:shadow-2xl hover:brightness-125 transition h-full;
+    @apply bg-gray-50 dark:bg-gray-800/30 backdrop-blur-lg hover:shadow-md transition h-full;
   }
 }

@@ -1,4 +1,4 @@
-type ProjectType = {
+export type ProjectType = {
   name: string;
   desc: string;
   imageURL: string;

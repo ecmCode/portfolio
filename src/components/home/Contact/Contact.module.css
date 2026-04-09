@@ -20,17 +20,17 @@
 
 .slot .inputBox:has(input:valid) .icon,
 .slot .inputBox:has(input:focus) .icon {
-  @apply translate-x-2 text-cyan-400;
+  @apply translate-x-2 text-gray-600 dark:text-gray-400;
 }
 
 .slot .inputBox,
 .slot textarea {
-  @apply w-full dark:bg-slate-100/10  bg-slate-500/20 rounded ring-1 ring-transparent transition duration-200;
+  @apply w-full dark:bg-gray-100/10 bg-gray-200/30 rounded ring-1 ring-transparent transition duration-200;
 }
 
 .slot .inputBox input,
 .slot textarea {
-  @apply p-2 outline-none w-full caret-cyan-400;
+  @apply p-2 outline-none w-full caret-gray-600 dark:caret-gray-400;
 }
 
 .slot .inputBox input {
@@ -41,7 +41,7 @@
 .slot .inputBox:has(input:focus),
 .slot textarea:valid,
 .slot textarea:focus {
-  @apply ring-cyan-400 shadow-md shadow-cyan-500/30;
+  @apply ring-gray-400 dark:ring-gray-600 shadow-md shadow-gray-400/20 dark:shadow-gray-600/20;
 }
 
 .warning {

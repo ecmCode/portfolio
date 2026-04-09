@@ -20,37 +20,35 @@ const Navbar = ({
   return (
     <nav className="relative">
       <ul
-        className="fixed w-full flex gap-10 justify-center items-center 
-        py-4 px-8 backdrop-blur-md z-50 
-        bg-slate-300/20 dark:bg-slate-700/20 
-        ring-1 ring-slate-800/50 dark:ring-slate-200/50"
+        className="fixed w-full flex gap-10 justify-center items-center
+        py-4 px-8 backdrop-blur-md z-50
+        bg-gray-100/30 dark:bg-gray-800/30
+        ring-1 ring-gray-300 dark:ring-gray-700"
       >
         <li className="text-lg md:text-xl">
           <Link
             href="/"
             className={
               router.pathname === "/"
-                ? "text-cyan-500 dark:text-cyan-500"
-                : "hover:text-cyan-500 dark:hover:text-cyan-500"
+                ? "text-gray-900 dark:text-gray-100 underline underline-offset-2"
+                : "hover:text-gray-600 dark:hover:text-gray-400"
             }
           >
             Home
           </Link>
         </li>
-        
+
         {routes.map((route) => (
           <li
             key={route.name.toLowerCase()}
-            className="text-lg md:text-xl 
-        
-          "
+            className="text-lg md:text-xl"
           >
             <Link
               href={route.link}
               className={
                 router.pathname.includes(route.link)
-                  ? "text-cyan-500 dark:text-cyan-500"
-                  : "hover:text-cyan-500 dark:hover:text-cyan-500"
+                  ? "text-gray-900 dark:text-gray-100 underline underline-offset-2"
+                  : "hover:text-gray-600 dark:hover:text-gray-400"
               }
             >
               {route.name}

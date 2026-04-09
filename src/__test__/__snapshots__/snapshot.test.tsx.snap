@@ -16,6 +16,7 @@ exports[`snapshot renders 404 page unchanged 1`] = `
       </h2>
     </div>
     <a
+      class="btn btn-action"
       href="/"
     >
       Home
@@ -82,6 +83,7 @@ exports[`snapshot renders About page unchanged 1`] = `
           href="https://github.com/"
         >
           <svg
+            class="contact-icon"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -99,6 +101,7 @@ exports[`snapshot renders About page unchanged 1`] = `
           href="https://www.instagram.com/"
         >
           <svg
+            class="contact-icon"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -116,6 +119,7 @@ exports[`snapshot renders About page unchanged 1`] = `
           href="https://discord.com/"
         >
           <svg
+            class="contact-icon"
             fill="currentColor"
             height="1em"
             stroke="currentColor"
@@ -158,6 +162,7 @@ exports[`snapshot renders About page unchanged 1`] = `
       </p>
     </div>
     <a
+      class="btn btn-primary"
       href="/"
     >
       Home
@@ -173,68 +178,78 @@ exports[`snapshot renders Projects page unchanged 1`] = `
       Projects
     </h1>
     <ul
-      class="grid grid-cols-1 md:grid-cols-2 justify-center items-center place-items-center w-full h-auto gap-4 py-10"
+      class="grid grid-cols-1 sm:grid-cols-2 justify-center items-center place-items-center w-full lg:w-4/5 h-auto gap-10 lg:gap-20 p-10"
     >
       <li
-        class="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-4 bg-slate-200/40 dark:bg-slate-500/20 rounded-sm shadow-md shadow-slate-200 dark:shadow-slate-900 "
+        class="card card-project"
       >
-        <h2>
-          countdown clock
-        </h2>
         <div
-          class="p-10"
+          class="box"
         >
-          <p>
-            countdown clock app using React + Typescript
-          </p>
-        </div>
-        <div
-          class="flex flex-col lg:flex-row gap-2 justify-around w-full"
-        >
-          <a
-            href="https://ecmcode.github.io/countdown-timer/"
-            target="_blank"
+          <h2>
+            countdown clock
+          </h2>
+          <div
+            class="p-10"
           >
-            Demo
-          </a>
-          <a
-            class="bg-cyan-400/20"
-            href="https://github.com/ecmCode/countdown-timer"
-            target="_blank"
+            <p>
+              countdown clock app using React + Typescript
+            </p>
+          </div>
+          <div
+            class="btns"
           >
-            Code
-          </a>
+            <a
+              class="btn btn-action"
+              href="https://ecmcode.github.io/countdown-timer/"
+              target="_blank"
+            >
+              Demo
+            </a>
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/ecmCode/countdown-timer"
+              target="_blank"
+            >
+              Code
+            </a>
+          </div>
         </div>
       </li>
       <li
-        class="flex flex-col gap-4 justify-between items-center w-2/3 h-full p-4 bg-slate-200/40 dark:bg-slate-500/20 rounded-sm shadow-md shadow-slate-200 dark:shadow-slate-900 "
+        class="card card-project"
       >
-        <h2>
-          shopping list
-        </h2>
         <div
-          class="p-10"
+          class="box"
         >
-          <p>
-            shopping list app using React
-          </p>
-        </div>
-        <div
-          class="flex flex-col lg:flex-row gap-2 justify-around w-full"
-        >
-          <a
-            href="https://ecmcode.github.io/shopping-list/"
-            target="_blank"
+          <h2>
+            shopping list
+          </h2>
+          <div
+            class="p-10"
           >
-            Demo
-          </a>
-          <a
-            class="bg-cyan-400/20"
-            href="https://github.com/ecmCode/shopping-list"
-            target="_blank"
+            <p>
+              shopping list app using React
+            </p>
+          </div>
+          <div
+            class="btns"
           >
-            Code
-          </a>
+            <a
+              class="btn btn-action"
+              href="https://ecmcode.github.io/shopping-list/"
+              target="_blank"
+            >
+              Demo
+            </a>
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/ecmCode/shopping-list"
+              target="_blank"
+            >
+              Code
+            </a>
+          </div>
         </div>
       </li>
     </ul>

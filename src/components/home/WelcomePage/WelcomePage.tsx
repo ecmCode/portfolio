@@ -29,7 +29,7 @@ const WelcomePage = () => {
           <h2>A collection of my work.</h2>
           <p className={style.paragraph}>
             {`
-              I'm Lee, a self taught frontend developer since 2019. I specialize in responsive and user-friendly websites. Whether you're a small business or a large corporation, I'm here to help bring your vision to life. Feel free to explore my portfolio and contact me to discuss your project.
+              I'm Lee, a frontend developer building responsive, user-friendly websites.
             `}
           </p>
           <div
