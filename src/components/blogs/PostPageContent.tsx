@@ -115,6 +115,10 @@ const PostPageContent = ({ post, darkmode}: { post: PostType , darkmode: boolean
     updatedAt,
   } = usePost(post); // unpack all values using usePost hook
 
+  if (!post || !post.fields || !title || !content) {
+    return <main>Loading...</main>;
+  }
+
   return (
     <main className={style.main}>
       <Image
