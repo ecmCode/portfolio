@@ -44,6 +44,10 @@ const BlogPost = ({ post }: { post: PostType }) => {
     createdAt,
   } = usePost(post);
 
+  if (!post || !post.fields || !title || !url) {
+    return null;
+  }
+
   return (
     <li className="card card-blog">
       <div className={style.box}>

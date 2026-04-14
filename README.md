@@ -1,82 +1,85 @@
-# Project Documentation
+# Portfolio
 
-[Page URL](https://portfolio-ecmcode.vercel.app/)
+[Live Site](https://portfolio-ecmcode.vercel.app/)
 
 ## Introduction
 
-This project is a full-stack web application developed using Next.js, a popular React framework for building server-rendered applications. It provides an example of a simple application with multiple pages and routing capabilities.
+A minimalist personal portfolio built with Next.js and TypeScript. Features a clean silver-white aesthetic with a focus on readability and simplicity. Blog content is managed through Contentful CMS.
 
-The project showcases the implementation of dynamic routes, navigation between pages, and handling of non-existing routes. It utilizes technologies such as Next.js, React, TypeScript, Tailwind CSS, and Jest for testing.
+## Pages
 
-## Features
+- **Home** — Introduction, project showcase, and contact form
+- **About** — Background and skills
+- **Projects** — Highlighted personal projects
+- **Blogs** — Blog posts fetched from Contentful CMS
+- **Blog post** — Individual post page with rich text rendering
 
-- **Home page:** Displays the main landing page of the application.
-- **About page:** Provides information about the creator.
-- **Projects page:** Showcases a list of projects.
-- **Blogs page:** Displays a list of blog posts.
-- **NotFound page:** Handles non-existing routes and redirects to the `/404` page.
+## Tech Stack
 
-## Technologies Used
-
-The following technologies and libraries were used in the development of this project:
-
-- **Next.js:** A React framework for server-rendered applications.
-- **React:** A JavaScript library for building user interfaces.
-- **TypeScript:** Provides type checking and type safety.
-- **Tailwind CSS:** A utility-first CSS framework for styling.
-- **Jest:** A JavaScript testing framework for unit tests.
-- **ChatGPT:** An AI model used for generating ideas and dummy tests.
+| Technology | Purpose |
+|---|---|
+| Next.js (Pages Router) | Framework with SSG via `getStaticProps` |
+| TypeScript | Type safety |
+| Tailwind CSS | Utility-first styling |
+| Contentful | Headless CMS for blog content |
+| date-fns | Date formatting |
+| react-code-blocks | Syntax-highlighted code blocks in posts |
 
 ## File Structure
 
-The project follows a typical file structure for a Next.js application:
-
-```js
+```
 src/
-├── pages/              // Contains the Next.js pages
-│     ├── about/        // About page
-│     │     └─ index.tsx     
-│     ├── projects/     // Projects page
-│     │     └─ index.tsx   
-│     ├── blogs/        // Blogs page
-│     │     ├─ [id].tsx // Blog slug page
-│     │     └─ index.tsx   
-│     ├── index.tsx     // Home page
-│     ├── globals.css   // Global CSS styling
-│     ├── _app.tsx       
-│     ├── _document.tsx       
-│     └── 404.tsx       // 404 Not Found page
+├── pages/
+│   ├── index.tsx           # Home (WelcomePage + ProjectShowcase + Contact)
+│   ├── about/index.tsx
+│   ├── projects/index.tsx
+│   ├── blogs/
+│   │   ├── index.tsx       # Blog list
+│   │   ├── [slug].tsx      # Individual post
+│   │   └── tags/           # Tag filtering
+│   ├── globals.css
+│   ├── _app.tsx
+│   └── 404.tsx
 │
-├── assets/             // Contains assets
-├── components/         // Contains shared components
-├── hooks/              // Contains React hooks
-├── types/              // Contains TypeScript types
-└── __test__/           // Contains test files
+├── components/
+│   ├── global/             # Navbar, Footer, ThemeProvider, Gradient
+│   ├── home/               # WelcomePage, ProjectShowcase, Contact
+│   └── blogs/              # BlogPost, BlogPageContent, PostPageContent
+│
+├── hooks/
+│   ├── usePost.ts          # Unpacks Contentful entry fields
+│   └── Suspense.tsx        # Delayed suspense wrapper
+│
+├── types/                  # TypeScript types (PostType, ProjectType, etc.)
+├── client.ts               # Contentful client
+└── data/projects.json      # Static project data
 ```
 
-## Testing
+## Environment Variables
 
-The project includes a set of snapshot tests using the `@testing-library/react` library and Jest. The tests cover the rendering of the different pages, including the NotFound page. The `next-router-mock` library is used to mock the Next.js Router and simulate URL changes.
-
-To run the tests, execute the following command:
+Create a `.env.local` file with:
 
 ```bash
-npm run test
+CONTENTFUL_SPACE_ID=your_space_id
+CONTENTFUL_ACCESS_TOKEN=your_access_token
 ```
 
-## Setup and Installation
+## Getting Started
 
-To set up and run the project locally, follow these steps:
+```bash
+npm install
+npm run dev
+```
 
-1. Clone the repository: `git clone <repository-url>`
-2. Install dependencies: `npm install`
-3. Start the development server: `npm run dev`
-4. Open the application in your browser at `http://localhost:3000`
+Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Build
+
+```bash
+npm run build
+npm start
+```
 
 ## Deployment
 
-The project can be deployed to various hosting platforms supporting Node.js applications. To deploy the application, follow the deployment guidelines provided by the hosting platform of your choice.
-
-## Conclusion
-
-This technical documentation provides an overview of the project, its features, technologies used, file structure, testing approach, and deployment instructions. It serves as a reference for understanding and working with the project.
+Deployed on Vercel. Push to `main` to trigger automatic deployment.
