@@ -3,7 +3,7 @@ import { cleanup, render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 describe("Home", () => {
-  beforeEach(() => render(<Home posts={[]} error={""} />));
+  beforeEach(() => render(<Home />));
   afterEach(() => cleanup());
   it("should render the component", () => {
     const main = screen.getByRole("main");

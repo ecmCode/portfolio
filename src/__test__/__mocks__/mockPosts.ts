@@ -1,3 +1,5 @@
+type BlogType = { userId: number; id: number; title: string; body: string };
+
 export const mockPosts: BlogType[] = [
   {
     userId: 1,

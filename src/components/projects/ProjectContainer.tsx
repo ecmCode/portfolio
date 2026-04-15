@@ -1,4 +1,5 @@
 import ProjectBox from "./ProjectBox";
+import type { ProjectType } from "@/types/ProjectType";
 
 const ProjectContainer = ({ projects }: { projects: ProjectType[] }) => {
   return (
