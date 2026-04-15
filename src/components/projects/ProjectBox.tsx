@@ -1,5 +1,6 @@
 import Link from "next/link";
 import style from "./ProjectBox.module.css";
+import type { ProjectType } from "@/types/ProjectType";
 
 const ProjectBox = ({
   name,
